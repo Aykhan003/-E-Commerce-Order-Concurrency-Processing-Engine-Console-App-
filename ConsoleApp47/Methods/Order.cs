@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp47;
+﻿using ConsoleApp47.Enums;
+
+namespace ConsoleApp47.Methods;
 
 internal class Order : IEntity
 {

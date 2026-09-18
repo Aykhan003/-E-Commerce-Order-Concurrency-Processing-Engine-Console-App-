@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp47;
+﻿namespace ConsoleApp47.Enums;
 
 internal enum OrderStatus
 {

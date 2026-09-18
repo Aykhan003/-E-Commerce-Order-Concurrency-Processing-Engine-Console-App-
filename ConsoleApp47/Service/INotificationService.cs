@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp47;
+﻿namespace ConsoleApp47.Service;
 
 internal interface INotificationService
 {

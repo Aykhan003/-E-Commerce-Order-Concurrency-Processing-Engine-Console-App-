@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp47;
+﻿namespace ConsoleApp47.Methods;
 
 internal class OrderItem
 {

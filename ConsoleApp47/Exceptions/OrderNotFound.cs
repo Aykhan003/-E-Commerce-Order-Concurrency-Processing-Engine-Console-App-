@@ -1,4 +1,4 @@
-﻿namespace ConsoleApp47;
+﻿namespace ConsoleApp47.Exceptions;
 
 public class OrderNotFound : Exception
 {

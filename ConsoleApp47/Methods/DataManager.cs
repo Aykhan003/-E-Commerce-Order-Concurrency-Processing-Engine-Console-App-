@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace ConsoleApp47;
+namespace ConsoleApp47.Methods;
 
 public static class DataManager
 {

@@ -1,5 +1,5 @@
 ﻿using System.Reflection;
-namespace ConsoleApp47;
+namespace ConsoleApp47.Methods;
 public static class ReflectionHelper
 {
     public static void InspectObject(object obj)

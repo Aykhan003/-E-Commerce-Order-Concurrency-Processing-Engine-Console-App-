@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp47;
+﻿using ConsoleApp47.Service;
+
+namespace ConsoleApp47.Methods;
 
 internal class OrderProfessor<T> : IOrderService<T> where T : Order, IEntity
 {
