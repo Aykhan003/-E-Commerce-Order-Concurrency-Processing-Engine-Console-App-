@@ -1,9 +1,10 @@
 ﻿namespace ConsoleApp47.Service;
 
-internal class EmailNotificationService : INotificationService
+public class EmailNotificationService : INotificationService
 {
-    public Task NotifyAsync(string message)
+    public async Task NotifyAsync(string message)
     {
-        throw new NotImplementedException();
+        Console.WriteLine($"Email Notification: {message}");
+        await Task.Delay(1000);
     }
 }

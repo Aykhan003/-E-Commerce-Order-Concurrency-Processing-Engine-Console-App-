@@ -4,5 +4,5 @@ internal interface IOrderService<T>
 {
     Task<T> AddOrderAsync(T order);
     Task<T> GetOrderByIdAsync(int id);
-    Task ProcessOrdersConcurrentlyAsync();
+    Task ProcessOrdersConcurrentlyAsync(List<T> orders);
 }

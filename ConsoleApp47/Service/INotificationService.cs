@@ -1,6 +1,6 @@
 ﻿namespace ConsoleApp47.Service;
 
-internal interface INotificationService
+public interface INotificationService
 {
     Task NotifyAsync(string message);
 }
