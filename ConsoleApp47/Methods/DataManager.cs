@@ -20,17 +20,17 @@ public static class DataManager
             File.Create(filePath).Close();
         }
     }
-    public static void SaveOrdersAsync<T>(List<T> orders)
+    public static async Task SaveOrdersAsync<T>(List<T> orders)
     {
         string json = JsonSerializer.Serialize(orders);
         StreamWriter writer = new StreamWriter(filePath);
-        writer.WriteLine(json);
-        writer.Close();
+        await writer.WriteLineAsync(json);
+        await writer.DisposeAsync();
     }
-    public static List<T> LoadOrdersAsync<T>()
+    public static async Task<List<T>> LoadOrdersAsync<T>()
     {
         StreamReader reader = new StreamReader(filePath);
-        string json = reader.ReadToEnd();
+        string json = await reader.ReadToEndAsync();
         reader.Close();
         if (string.IsNullOrWhiteSpace(json))
         {

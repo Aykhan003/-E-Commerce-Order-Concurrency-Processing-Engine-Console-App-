@@ -14,14 +14,14 @@ internal class OrderProcessor<T> : IOrderService<T> where T : Order, IEntity
     public async Task<T> AddOrderAsync(T order)
     {
         await _notificationService.NotifyAsync($"Adding order with ID: {order.Id}");
-        _orders.Add(order);
+        await Task.Run(() => _orders.Add(order));
         return order;
     }
 
     public async Task<T> GetOrderByIdAsync(int id)
     {
         await _notificationService.NotifyAsync($"Retrieving order with ID: {id}");
-        return _orders.Find(o => o.Id == id);
+        return await Task.Run(() => _orders.Find(o => o.Id == id));
     }
 
     public async Task ProcessOrdersConcurrentlyAsync(List<T> orders)
